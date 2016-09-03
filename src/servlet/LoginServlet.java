@@ -42,7 +42,7 @@ public class LoginServlet extends HttpServlet {
 		AdminService service = new AdminServiceImpl();
 		try {
 			ad = service.getAdmin(user,pwd);
-			request.setAttribute("admin", ad);
+			request.setAttribute("user", user);
 			request.getRequestDispatcher("/PageServlet").forward(request, response);
 		} catch (UserNullException e) {
 			request.setAttribute("msg1", e.getMessage());

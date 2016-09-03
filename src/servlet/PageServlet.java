@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import entity.Admin;
 import entity.Employee;
 import service.EmployeeService;
 import service.serviceImpl.EmployeeServiceImpl;
@@ -28,7 +29,9 @@ public class PageServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		request.setCharacterEncoding("utf-8");
+		
 		String currPage = request.getParameter("currentPage");
+		String user = request.getParameter("user");
 		if(currPage==null||"".equals(currPage.trim())){
 			currPage = "1";
 		}
@@ -39,6 +42,7 @@ public class PageServlet extends HttpServlet {
 		
 		employeeService.getAll(pageBean);
 		request.setAttribute("pageBean", pageBean);
+		request.setAttribute("user", user);
 		
 		uri = "/list.jsp";
 		request.getRequestDispatcher(uri).forward(request, response);
