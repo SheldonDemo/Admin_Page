@@ -8,7 +8,7 @@ import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import dao.AdminDao;
 import entity.Admin;
-import util.JDBCUtil;
+import utils.JDBCUtil;
 
 public class AdminDaoImpl implements AdminDao{
 

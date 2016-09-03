@@ -1,7 +1,7 @@
 package dao;
 
 import entity.Employee;
-import util.PageBean;
+import utils.PageBean;
 
 public interface EmployeeDao {
 

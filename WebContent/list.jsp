@@ -5,7 +5,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    
     <title>分页查询数据</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -13,6 +12,10 @@
   </head>
   
   <body>
+    <h2>Welcome ${admin.user }</h2>
+    <a href='${pageContext.request.contextPath }/index.jsp'>退出</a>
+    <a href='${pageContext.request.contextPath }/DeleteAdminServlet?user=${admin.user }'>注销帐号</a>
+    <a href="${pageContext.request.contextPath }/update.jsp?user=${admin.user }">修改密码</a>
   	<table border="1" width="80%" align="center" cellpadding="5" cellspacing="0">
   		<tr>
   			<td>序号</td>
@@ -40,11 +43,10 @@
   		<tr>
   			<td colspan="3" align="center">
   				当前<font color="red">${pageBean.currentPage }</font>/${pageBean.totalPage }页     &nbsp;&nbsp;
-  				
-  				<a href="${pageContext.request.contextPath }/PageServlet?currentPage=1">首页</a>
-  				<a href="${pageContext.request.contextPath }/PageServlet?currentPage=${pageBean.currentPage-1}">上一页 </a>
-  				<a href="${pageContext.request.contextPath }/PageServlet?currentPage=${pageBean.currentPage+1}">下一页 </a>
-  				<a href="${pageContext.request.contextPath }/PageServlet?currentPage=${pageBean.totalPage}">末页</a>
+  				<a href='${pageContext.request.contextPath }/PageServlet?currentPage=1'>首页</a>
+  				<a href='${pageContext.request.contextPath }/PageServlet?currentPage=${pageBean.currentPage-1}'>上一页 </a>
+  				<a href='${pageContext.request.contextPath }/PageServlet?currentPage=${pageBean.currentPage+1}'>下一页 </a>
+  				<a href='${pageContext.request.contextPath }/PageServlet?currentPage=${pageBean.totalPage}'>末页</a>
   			</td>
   		</tr>
   		

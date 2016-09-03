@@ -18,7 +18,7 @@
 <body>
 <form action="${pageContext.request.contextPath }/LoginServlet" method="post">
 <table align="center" border="1" width="400px">
-<caption><h3>登陆界面</h3></caption>
+    <caption><h3>登陆界面</h3></caption>
 	<tr>
     	<th>帐号</th>
         <td><input type="text" name="user" value="${user }"/><font color="red">${msg1 }</font><font color="red">${msg7 }</font></td>

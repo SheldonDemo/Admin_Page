@@ -1,7 +1,7 @@
 package service;
 
 import entity.Employee;
-import util.PageBean;
+import utils.PageBean;
 
 public interface EmployeeService {
 

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import entity.Employee;
 import service.EmployeeService;
 import service.serviceImpl.EmployeeServiceImpl;
-import util.PageBean;
+import utils.PageBean;
 
 /**
  * Servlet implementation class PageServlet

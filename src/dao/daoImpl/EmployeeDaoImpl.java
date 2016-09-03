@@ -9,8 +9,8 @@ import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import dao.EmployeeDao;
 import entity.Employee;
-import util.JDBCUtil;
-import util.PageBean;
+import utils.JDBCUtil;
+import utils.PageBean;
 
 public class EmployeeDaoImpl implements EmployeeDao {
 

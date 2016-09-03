@@ -4,7 +4,7 @@ import dao.EmployeeDao;
 import dao.daoImpl.EmployeeDaoImpl;
 import entity.Employee;
 import service.EmployeeService;
-import util.PageBean;
+import utils.PageBean;
 
 public class EmployeeServiceImpl implements EmployeeService {
 
